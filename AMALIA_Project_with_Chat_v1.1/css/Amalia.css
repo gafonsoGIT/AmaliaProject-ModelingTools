@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #000059!important;
+}
+
+.container {
+    min-height: 400px;
+	max-height: 600px;
+    min-width: 650px;
+	max-width: 850px;
+    box-shadow: 3px 3px 10px -2px #040404;
+    display: flex;
+    border-radius: 10px;
+    background-color: #63687C;
+}
+
+.image {
+    flex: 25%;
+    background: white;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	border-radius: 10px;
+}
+
+.buttons {
+	margin-top: 25%;
+	background-color: white;
+}
+
+#btnCreateProject {
+	background-color: white;
+	border: none;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+}
+
+#btnCreateProject:hover {
+	background-color: #218bb8;
+	transform: scale(1.1);
+}
+
+#btnOpenProjectFromBrowser {
+	background-color: white;
+	border: none;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+}
+
+#btnOpenProjectFromBrowser:hover {
+	background-color: #218bb8;
+	transform: scale(1.1);
+}
+
+#btnOpenProjectFile {
+	background-color: white;
+	border: none;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+}
+
+#btnOpenProjectFile:hover{
+	background-color: #218bb8;
+	transform: scale(1.1);
+}
+
+#btnExportProject {
+	background-color: white;
+	border: none;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+}
+
+#btnExportProject:hover{
+	background-color: #218bb8;
+	transform: scale(1.1);
+}
+
+#btnApagarProjecto {
+	background-color: white;
+	border: none;
+	color: #000;
+	padding: 5px;
+	font-weight: normal;
+}
+
+#btnApagarProjecto:hover{
+	background-color: #218bb8;
+	transform: scale(1.1);
+}
+
+.image h1 {
+    margin-top: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+	font-size: 26px;
+	font-weight: bold;
+	color: #000;
+}
+
+/* .image p {
+    margin-top: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+	font-size: 24px;
+	color: black;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+} */
+
+span {
+    color: #000;
+	font-size: 20px;
+}
+
+.content {
+    flex: 40%;
+    background-color: #63687C;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+	border-radius: 10px;
+	margin-top: 10%;
+}
+
+#z01,#z03,#z05{
+	border-bottom: 1px solid #000;
+	width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    font-size: 28px;
+    color: #fff;
+	font-weight: normal;
+	margin-bottom: 5%;
+}
+
+#txt {
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    background-color: rgba(156, 77, 156, 0.3);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    color: #aa38a4;
+}
+
+label {
+    font-weight: bold;
+    font-size: small;
+}
+
+#txt:focus {
+    outline: none;
+}
+
+.fp {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    transition: 0.3s;
+}
+
+.fp:hover {
+    color: #c446c9;
+}
+
+button {
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: linear-gradient(to right, #4568DC, #B06AB3);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+#foot {
+    margin-top: -2%;
+}
+
