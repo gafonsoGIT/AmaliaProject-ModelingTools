@@ -41,7 +41,7 @@
 	<text id="texto2">Amália significa <b>A</b>gile <b>M</b>odel-driven <b>A</b>pp<b>LI</b>c<b>A</b>tion Development Method and Tools.</text>
  <text id="texto3">Informações adicionais:</text>
 	<text id="texto4">Desenvolvido por : Domingos Gomes e Rui Silva</text>
-	<text id="texto5">V1.0, Fevereiro 2015</text>
+	<text id="texto5">V1.1, 2022</text>
 	<text id="dialogoLimpaDiagramap"> Esta ação vai remover todos o elementos. Pretende Continuar?</text>
 	<text id="atributosClasseb"> Atributos</text>
 	<text id="metodosClasseb">Métodos</text>
@@ -212,6 +212,10 @@
     </button>
     <button id="btnChangeActorName">
     	<value>Alterar</value>
+    	<title></title>
+    </button>
+	<button id="btnStartTogetherJS">
+    	<value>Trabalhar em conjunto</value>
     	<title></title>
     </button>
 	<input id="nomeProjecto">Nome do Projeto</input>

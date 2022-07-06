@@ -62,6 +62,7 @@ input[type=reset],
 #btnChangeStyleDark,
 #btnthemes,
 #btnlanguage,
+#btnStartTogetherJS,
 #lng_english,
 #lng_portuguese,
 #btnCallChat,
@@ -90,6 +91,7 @@ input[type=reset]:hover,
 #btnlanguage:hover,
 #lng_english:hover,
 #lng_portuguese:hover,
+#btnStartTogetherJS,
 #btnCallChat:hover,
 #voltarPagPrincipal:hover{
 	background:#374343;
@@ -111,6 +113,7 @@ input[type=reset]:hover,
 #btnChangeStyleDark,
 #btnthemes,
 #btnlanguage,
+#btnStartTogetherJS,
 #lng_english,
 #lng_portuguese,
 #btnCallChat,
@@ -537,6 +540,7 @@ ol.tree
 #lng_english,
 #lng_portuguese,
 #btnCallChat,
+#btnStartTogetherJS,
 #voltarPagPrincipal
 
 {

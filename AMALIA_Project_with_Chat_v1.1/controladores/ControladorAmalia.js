@@ -33,8 +33,6 @@ var CLBundle;   // conjunto de elementos que constituem o IDE de classes
 var nome;
 var language="languages/english.xml";
 
-
-
 ControladorAmalia ={
 
 	VerificaTutorial1st: function(){
@@ -161,8 +159,6 @@ ControladorAmalia ={
             });
 	},
 
-
-
     //DMMLG
     //Atualiza a informação nas variaveis em memoria do browser
     ActualizaVariaveis: function(){
@@ -204,9 +200,7 @@ ControladorAmalia ={
             localStorage.removeItem("classes");
     },
 
-
 	// Aparecer desaparecer dialogos para mudar os atributos dos elementos do diagrama.
-
 	toogleDialogo: function (dialogoNome, focus){
 
 		if ($(dialogoNome).css("display") == "block"){
