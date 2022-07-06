@@ -10,25 +10,27 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="joint/joint.css" />
-		<link rel="stylesheet" href="css/Amalia.css" title="Dark"/>
-        <link rel="Alternate stylesheet" href="css/Amalia_light.css" title="Light"/>
-		<link rel="stylesheet" href="css/Amalia_light_backup.css" title="Light"/>
-
+		<link rel="stylesheet" href="css/Amalia.css" title="Dark" />
+		<link rel="stylesheet" href="css/Amalia_backup.css" title="Dark"/>
+		<link rel="Alternate stylesheet" href="css/Amalia_light_backup.css" title="Light"/>
+		<link rel="Alternate stylesheet" href="css/Amalia_light.css" title="Light"/>
+	
+		
 		<!-- Bibliotecas -->
-        <script src="joint/joint.js"></script>
-		<script src="jQuery/jquery-1.10.2.js"></script>
 		<script src="joint/geometry.js"></script>
-
+		<script src="jQuery/jquery-1.10.2.js"></script>
+		<script src="joint/joint.js"></script>
 		<script src="joint/joint.shapes.uml.js"></script>
 		<script src="Blob.js-master/Blob.js"></script>
 		<script src="FileSaver.js-master/FileSaver.js"></script>
+
+		<script src="https://togetherjs.com/togetherjs-min.js"></script>
 
 		<!-- Modelos -->
 		<script src="modelos/Amalia.js"></script>
 
 		<!-- Controlador -->
 		<script src="controladores/ControladorAmalia.js"></script>
-
 
 		<!-- ide -->
 		<script src="ide/ideDiagramaClasses.js"></script>
@@ -151,20 +153,20 @@
                     <li>
                         <input id="btnCallChat" type="button" class="button" onclick="javascript:void window.open('http://localhost:3000','1422053451651','width=310,height=590,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" value="Chat"/>
                     </li>
+					<li>
+                        <input id="btnStartTogetherJS" type="button" onclick="TogetherJS(this); return false;"/>
+                    </li>
                 </ul>
 			</div>
-
-        <div class="floating-menu" id="floatingMenu">
-				<h3>Toolbox</h3>
-				<input id="addClassGraph" type="image" src="img/Class.png" alt="Insert Class" width="39" height="48" title="Add Class">
-                <input id="addInterfaceGraph" type="image" src="img/Interface.png" alt="Insert Interface" width="39" height="48" title="Add Interface">
-                <input id="addAbstractGraph" type="image" src="img/Abstract.png" alt="Insert Abstract" width="39" height="48" title="Add Abstract">
-                <input id="makeZoomToFit" type="image" src="img/Zoom.png" alt="Zoom To Fit" width="48" height="48" title="Zoom to Fit">
-                <input id="clearDiagram" type="image" src="img/clean.png" alt="Clear Graph" width="48" height="48" title="Clear diagram">
+			<div class="floating-menu" id="floatingMenu">
+					<h3>Toolbox</h3>
+					<input id="addClassGraph" type="image" src="img/Class.png" alt="Insert Class" width="39" height="48" title="Add Class">
+					<input id="addInterfaceGraph" type="image" src="img/Interface.png" alt="Insert Interface" width="39" height="48" title="Add Interface">
+					<input id="addAbstractGraph" type="image" src="img/Abstract.png" alt="Insert Abstract" width="39" height="48" title="Add Abstract">
+					<input id="makeZoomToFit" type="image" src="img/Zoom.png" alt="Zoom To Fit" width="48" height="48" title="Zoom to Fit">
+					<input id="clearDiagram" type="image" src="img/clean.png" alt="Clear Graph" width="48" height="48" title="Clear diagram">
 			</div>
-
-
-			     <div class="floating-tree" id="floatingTree">
+				<div class="floating-tree" id="floatingTree">
                 <h3 id="floatingTreeh">Project Elements</h3>
                 <ol class="tree">
 							<li class="arvore">
@@ -302,7 +304,7 @@
 
 			<footer>
 				<p id="foot">
-					AmaliaIDE v1.0 - 2015
+					AmaliaIDE v1.1 - 2022
 				</p>
 			</footer>
 		</div>

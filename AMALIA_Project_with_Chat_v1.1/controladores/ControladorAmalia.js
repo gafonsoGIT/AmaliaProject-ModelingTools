@@ -33,8 +33,6 @@ var CLBundle;   // conjunto de elementos que constituem o IDE de classes
 var nome;
 var language="languages/english.xml";
 
-
-
 ControladorAmalia ={
 
 	VerificaTutorial1st: function(){
@@ -161,8 +159,6 @@ ControladorAmalia ={
             });
 	},
 
-
-
     //DMMLG
     //Atualiza a informação nas variaveis em memoria do browser
     ActualizaVariaveis: function(){
@@ -204,9 +200,7 @@ ControladorAmalia ={
             localStorage.removeItem("classes");
     },
 
-
 	// Aparecer desaparecer dialogos para mudar os atributos dos elementos do diagrama.
-
 	toogleDialogo: function (dialogoNome, focus){
 
 		if ($(dialogoNome).css("display") == "block"){
@@ -259,7 +253,7 @@ ControladorAmalia ={
 			var elementoCaso = caso.toJSON();
             var existe = false;
 			var nomeCaso = elementoCaso.attrs.text.text;
-            	//console.log(nomeCaso);
+            	console.log(nomeCaso);
 			//clear all checkboxes
 			$("#idlcrud1").prop('checked', false);
 			$("#idlcrud2").prop('checked', false);
@@ -288,7 +282,6 @@ ControladorAmalia ={
 						 $("#idlcrud5").prop('checked', true);
 					 }
                  }
-
                     $("#listaEntidades").val(listaCasos[i].entity_caso);
                     $("#listaEntidadesMaster").val(listaCasos[i].masterent);
                     existe=true;
@@ -473,7 +466,6 @@ ControladorAmalia ={
 
         }
     },
-
 
     toggleDialogoAbreProjectoDisco:function(){
         this.toogleDialogo("#dialogoAbreProjectoDisco",false);
@@ -728,7 +720,9 @@ ControladorAmalia ={
 	//AssociarCasos
 	associaCasos : function (graph){
 		var elementoCimaId = $("#elementoCimaId").val();
+		console.log(elementoCimaId)
 		var elementoBaixoId = $("#elementoBaixoId").val();
+		console.log(elementoBaixoId)
 		var ligaCasos = $('input[name="ligaCasos"]:checked').val();
 		if (elementoCimaId && elementoBaixoId && ligaCasos){
 			if(ligaCasos == "include"){

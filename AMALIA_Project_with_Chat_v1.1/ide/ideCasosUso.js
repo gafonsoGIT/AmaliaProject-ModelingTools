@@ -146,8 +146,6 @@ $(document).ready(function () {
         //trazer o elemento clicado para a frente do diagrama
         elemento.toFront();
 
-
-
     });
 
 
@@ -285,14 +283,9 @@ $(document).ready(function () {
     });
 
 
-
-
-
-
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Eventos dos dialogos <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
     //Alterar o nome do Caso de Uso
     $("#caso_uso").submit(function (e) {
-
         ControladorAmalia.setNomeCaso(graph);
         ControladorAmalia.toogleDialogoCasoUso("");
         e.preventDefault();
@@ -422,8 +415,6 @@ $(document).ready(function () {
             console.log("Estou lixado");
         }
     });
-
-
 
     //Cancelar a abertura do ficheiro
     $("#btnCancelaAbrirCasosDisco").click(function () {

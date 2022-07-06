@@ -6,7 +6,6 @@
 //Na realidade um objecto com uma imagem e o nome actor por baixo
 
 
-
 joint.shapes.basic.Actor = joint.shapes.basic.Generic.extend({
 
     markup: '<g class="rotatable"><g class="scalable"><image/></g></g><text/>',

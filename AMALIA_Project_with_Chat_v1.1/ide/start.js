@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-
-
-
     //ControladorAmalia.supportsLocalStorage();
     actualizaFicheiros();
 	ControladorAmalia.ApplyCookie();

@@ -12,6 +12,7 @@ body {
     background: #000059!important;
 }
 
+
 .container {
     min-height: 400px;
 	max-height: 600px;
@@ -128,6 +129,7 @@ body {
 span {
     color: #000;
 	font-size: 20px;
+    font-weight: lighter!important;
 }
 
 .content {
@@ -139,11 +141,28 @@ span {
 	margin-top: 10%;
 }
 
-#z01,#z03,#z05{
-	border-bottom: 1px solid #000;
-	width: 40%;
+.projects {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.projects > div {
+    margin-top: 8px;
+}
+
+/* p { 
+    color: #fff!important;
+} */
+
+p #limdialogoLimpaDiagrama {
+    color: #000!important;
+}
+
+#z01,#z03,#z05,#z07,#z09{
+	border-bottom: 1px solid #fff;
+	width: 55%;
 }
 
 .content h1 {
@@ -207,3 +226,24 @@ button a {
     margin-top: -2%;
 }
 
+#p0h {
+    color: #000!important;
+}
+
+#p01 {
+    color: #fff!important;
+}
+
+#floatingTreeh {
+    font-size: small;
+    margin-bottom: 6%;
+}
+
+#togetherjs-dock.togetherjs-dock-right {
+    right: -7%!important;
+    top: 40%!important;
+}
+
+.togetherjs .togetherjs-window {
+    margin-top: -20%!important;
+}
