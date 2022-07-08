@@ -5,6 +5,7 @@
 }
 
 body {
+    /* width: 50%; */
     top: 50%;
     left: 50%;
     position: absolute;
@@ -237,7 +238,17 @@ button a {
 #floatingTreeh {
     font-size: small;
     margin-bottom: 6%;
+    background-color: #63687C!important;
 }
+
+#floatingTree {
+    background-color: #63687C!important;
+}
+
+#floatingMenu{
+    background-color: #63687C!important;
+}
+
 
 #togetherjs-dock.togetherjs-dock-right {
     right: -7%!important;
@@ -246,4 +257,39 @@ button a {
 
 .togetherjs .togetherjs-window {
     margin-top: -20%!important;
+}
+
+
+#footstage {
+    color: #fff;
+    position: absolute;
+    top: 90% !important;
+    left: 44% !important;
+}
+
+#title {
+    width: 120%;
+}   
+
+
+header {
+    background-color: #63687C !important;
+}
+
+header h1, #p0h{
+    color: #fff!important;
+}
+
+#voltarPagPrincipal, #btnthemes, #btnlanguage, #btnVoltarInicio, #btnClose, #btnSaveProject, #btnCallChat, #btnStartTogetherJS {
+    background-color: #63687C!important;
+    color: #fff!important;
+}
+
+#lng_english:hover, #lng_portuguese:hover, #btnChangeStyleLight:hover, #btnChangeStyleDark:hover, #btnGravarProjeto:hover, #btnGuardarCasosUsoDisco:hover{
+    background-color: #63687C!important;
+}
+
+#v-2 {
+    background-color: #63687C !important;
+    margin-left: 1%!important;
 }

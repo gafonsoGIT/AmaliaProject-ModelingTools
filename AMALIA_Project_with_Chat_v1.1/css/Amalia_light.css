@@ -235,3 +235,16 @@ button a {
 .togetherjs .togetherjs-window {
     margin-top: -20%!important;
 }
+
+
+#footstage {
+    color: #000;
+    position: absolute;
+    top: 90% !important;
+    left: 44% !important;
+}
+
+#title {
+    width: 120%;
+}
+

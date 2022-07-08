@@ -42,9 +42,9 @@ div.main{
 
 #modelo,
 div.main{
-	background: #242424;
+	/* background: #242424; */
     display: inline-flex;
-    box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.5);
     margin-left: 170px;
     margin-top: 20px;
     margin-right: 90px;
@@ -72,6 +72,7 @@ input[type=reset],
 #lng_english,
 #lng_portuguese,
 #btnCallChat,
+#btnStartTogetherJS,
 #voltarPagPrincipal
 {
 	background: #f7f7f7;
@@ -81,6 +82,7 @@ input[type=reset],
 	border:1px;
 	border-color:#374343;
 	border-style:solid;
+	border-radius: 2px;
 }
 
 input[type=button]:hover,
@@ -100,7 +102,7 @@ input[type=reset]:hover,
 #btnCallChat:hover,
 #voltarPagPrincipal:hover
 {
-	background:#000059;
+	background:#63687C;
 	color:#F7F7F7;
 /*	border: 1px;*/
 	border-color:#F7F7F7;
@@ -584,6 +586,7 @@ ol.tree
 #lng_english,
 #lng_portuguese,
 #btnCallChat,
+#btnStartTogetherJS,
 #voltarPagPrincipal
 {
 width: 160px;
