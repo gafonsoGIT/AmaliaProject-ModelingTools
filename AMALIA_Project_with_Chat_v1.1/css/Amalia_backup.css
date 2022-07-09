@@ -16,7 +16,7 @@ header{
 	text-align:left;
 	color:#f7f7f7;
 	background:#3C3F41;
-	padding-left:40px;
+	padding-left: 15px;
 	font-variant: small-caps;
 
 }
@@ -589,7 +589,7 @@ ol.tree
 #btnStartTogetherJS,
 #voltarPagPrincipal
 {
-width: 160px;
+width: 170px;
 
 }
 #sddm div
@@ -853,9 +853,9 @@ ul{
 	color: white;
 }
 
-#i02 p, #z02 p, #i04 p, #z04 p, #p02, #p04 {
+/* #i02 p, #z02 p, #i04 p, #z04 p, #p02, #p04 {
 	color: white;
-}
+} */
 
 #idTutorialBox {
 	font-size: 20px;

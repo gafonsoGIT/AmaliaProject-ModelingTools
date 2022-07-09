@@ -10,7 +10,7 @@ header{
 	text-align:left;
 	color:white;
 	background:#EBEBEB;
-	padding-left:40px;
+	padding-left: 15px;
 	font-variant: small-caps;
 }
 
@@ -35,10 +35,10 @@ div.main{
 
 #modelo,
 div.main{
-	background: white;
+	/* background: white; */
     display: inline-flex;
-    box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
-    margin-left: 170px;
+	box-shadow: 7px 7px 5px rgba(0,0,0,0.5);
+	margin-left: 170px;
     margin-top: 20px;
     margin-right: 90px;
 }

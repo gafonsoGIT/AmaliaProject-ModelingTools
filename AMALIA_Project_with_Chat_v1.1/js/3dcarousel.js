@@ -15,10 +15,10 @@ $.fn.carousel3d = function(args){
 
 	var size = el.carousel_frame.children().size();
 	var panelSize = el.carousel_frame.width();
-	var translateZ = Math.round( ( panelSize / 2 ) / Math.tan( Math.PI / size ) );
+	var translateZ = Math.round( ( panelSize / 2 ) / Math.tan( Math.PI / size ));
 
 	el.carousel_frame.css({
-		"transform": "rotateY(0deg) translateZ(-"+translateZ+"px)"
+		"transform": "rotateY(0deg) translateZ(-"+translateZ + "px)"
 	})
 
 	var rotateY = 0;
@@ -63,7 +63,6 @@ $.fn.carousel3d = function(args){
 
 		animate_slider();
 	});
-
 }
 })(jQuery);
 

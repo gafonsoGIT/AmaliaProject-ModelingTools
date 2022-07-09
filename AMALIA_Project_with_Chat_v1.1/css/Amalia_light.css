@@ -155,9 +155,16 @@ span {
     margin-top: 8px;
 }
 
-#z01,#z03,#z05,#z07,#z09{
+#z01 {
+    margin-top: 12%;
 	border-bottom: 1px solid #000;
-	width: 50%;
+	width: 55%;
+}
+
+#z02, #z03, #z04, #z05 {
+    border-bottom: 1px solid #000;
+    width: 55%;
+    margin-top: 12%;
 }
 
 .content h1 {
@@ -248,3 +255,29 @@ button a {
     width: 120%;
 }
 
+#v-2 {
+    background-color: #fff !important;
+    margin-left: 1%!important;
+}
+
+header {
+    background-color: #fff !important;
+}
+
+#voltarPagPrincipal, #btnthemes, #btnlanguage, #btnVoltarInicio, #btnClose, #btnSaveProject, #btnCallChat, #btnStartTogetherJS {
+    background-color: #F7FEFF!important;
+    color: #000!important;
+}
+
+#lng_english:hover, #lng_portuguese:hover, #btnChangeStyleLight:hover, #btnChangeStyleDark:hover, #btnGravarProjeto:hover, #btnGuardarCasosUsoDisco:hover{
+    background-color: #F7FEFF!important;
+    color: #000!important;
+}
+
+#floatingTree {
+    background-color: #F7FEFF!important;
+}
+
+#floatingMenu{
+    background-color: #F7FEFF!important;
+}

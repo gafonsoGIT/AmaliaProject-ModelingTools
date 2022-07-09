@@ -139,7 +139,7 @@ span {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 	border-radius: 10px;
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 .projects {
@@ -147,10 +147,11 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 8px !important; 
 }
 
 .projects > div {
-    margin-top: 8px;
+    margin-top: 8px ; 
 }
 
 /* p { 
@@ -161,10 +162,18 @@ p #limdialogoLimpaDiagrama {
     color: #000!important;
 }
 
-#z01,#z03,#z05,#z07,#z09{
+#z01 {
+    margin-top: 12%;
 	border-bottom: 1px solid #fff;
 	width: 55%;
 }
+
+#z02, #z03, #z04, #z05 {
+    border-bottom: 1px solid #fff;
+    width: 55%;
+    margin-top: 12%;
+}
+
 
 .content h1 {
     font-size: 28px;
@@ -231,9 +240,10 @@ button a {
     color: #000!important;
 }
 
-#p01 {
+#p01, #p02, #p03, #p04, #p05 {
     color: #fff!important;
 }
+
 
 #floatingTreeh {
     font-size: small;
@@ -290,6 +300,7 @@ header h1, #p0h{
 }
 
 #v-2 {
-    background-color: #63687C !important;
+    background-color: #fff !important;
     margin-left: 1%!important;
 }
+

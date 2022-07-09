@@ -18,6 +18,9 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *
  * Date: 2013-07-03T13:30Z
  */
+
+SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function(toElement) { return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM()); };
+
 (function( window, undefined ) {
 
 // Can't do this because several apps including ASP.NET trace
@@ -22560,7 +22563,7 @@ joint.dia.Paper = Backbone.View.extend({
             minScale: 0,
             maxScale: Number.MAX_VALUE
             //minScaleX
-            //minScaleY
+        	//minScaleY
             //maxScaleX
             //maxScaleY
             //fittingBBox

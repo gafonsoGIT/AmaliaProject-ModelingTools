@@ -45,8 +45,15 @@ joint.shapes.uml.Class = joint.shapes.basic.Generic.extend({
             '.uml-class-methods-rect': { 'stroke': 'black', 'stroke-width': 2, 'fill': '#2980b9' },
 
             '.uml-class-name-text': {
-                'ref': '.uml-class-name-rect', 'ref-y': .5, 'ref-x': .5, 'text-anchor': 'middle', 'y-alignment': 'middle', 'font-weight': 'bold',
-                'fill': 'black', 'font-size': 12, 'font-family': 'Times New Roman'
+                'ref': '.uml-class-name-rect',
+                'ref-y': .5,
+                'ref-x': .5,
+                'text-anchor': 'middle',
+                'y-alignment': 'middle',
+                'font-weight': 'bold',
+                'fill': 'black',
+                'font-size': 12,
+                'font-family': 'Times New Roman'
             },
             '.uml-class-attrs-text': {
                 'ref': '.uml-class-attrs-rect', 'ref-y': 5, 'ref-x': 5,
@@ -199,10 +206,12 @@ joint.shapes.uml.State = joint.shapes.basic.Generic.extend({
 
     markup: [
         '<g class="rotatable">',
-          '<g class="scalable">',
-            '<rect/>',
-          '</g>',
-          '<path/><text class="uml-state-name"/><text class="uml-state-events"/>',
+        '<g class="scalable">',
+        '<rect class="uml-state-body"/>',
+        '</g>',
+        '<path class="uml-state-separator"/>',
+        '<text class="uml-state-name"/>',
+        '<text class="uml-state-events"/>',
         '</g>'
     ].join(''),
 
@@ -213,6 +222,13 @@ joint.shapes.uml.State = joint.shapes.basic.Generic.extend({
         attrs: {
             rect: { 'width': 200, 'height': 200, 'fill': '#ecf0f1', 'stroke': '#bdc3c7', 'stroke-width': 3, 'rx': 10, 'ry': 10 },
             path: { 'd': 'M 0 20 L 200 20', 'stroke': '#bdc3c7', 'stroke-width': 2 },
+            '.uml-state-body': {
+                'width': 200, 'height': 200, 'rx': 10, 'ry': 10,
+                'fill': '#ecf0f1', 'stroke': '#bdc3c7', 'stroke-width': 3
+            },
+            '.uml-state-separator': {
+                'stroke': '#bdc3c7', 'stroke-width': 2
+            },
             '.uml-state-name': {
                 'ref': 'rect', 'ref-x': .5, 'ref-y': 5, 'text-anchor': 'middle',
                 'font-family': 'Courier New', 'font-size': 14, fill: '#000000'
