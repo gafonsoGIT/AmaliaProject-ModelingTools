@@ -62,7 +62,7 @@ function insertAbstractOnToGraph(){
 
 //************************************************
 //** Função para adicionar campos de texto para **
-//**     atributos ou métodosde uma Classe      **
+//**     atributos ou métodos de uma Classe      **
 //************************************************
 function addAtributoMetodo(classe){
 	//Div para o Atributo
@@ -151,9 +151,6 @@ function actualizaArvoreClasse(){
 //*******************************************
 $(document).ready(function(){
 
-
-
-
 	// Tipos de instancias dos objetos
 	var instanceClass = joint.shapes.uml.Class;//são todos
 	var instanceAbstract = joint.shapes.uml.Abstract; //Classe abstracta
@@ -173,7 +170,7 @@ $(document).ready(function(){
     el: $('#modelo'),
 	width: widthPaper,
 	height: heightPaper,// ainda tenho um problema com isto
-	gridSize:10,
+	gridSize: 10,
 	model: graph2
 	});
     graph2.fromJSON(classesDIAG);
@@ -206,79 +203,109 @@ function zoomfit(){
 		//trazer o elemento clicado para a frente do diagrama
 		elemento.toFront();
 
+		if (Date.now() - lastClickTime < 300) {
+			dblClick = true;
+		}
 	});
 
 	//Drop into para estabelecer ligações, mouseup
 	paper.on('cell:pointerup', function(cellView, evt, x, y){
 
-		var elementoCima = cellView.model;
-		if (x > widthPaper-20){
-            widthPaper = widthPaper+50;
-			paper.setDimensions(widthPaper,heightPaper);
-            //rect.position{x:0,y:(heightPaper-120)};
+		if (dblClick) {
+			dblClick = false;
+			dblClickFunction(cellView)
 		}
-        if(y > heightPaper-20){
-            heightPaper = heightPaper +50;
-            paper.setDimensions(widthPaper,heightPaper);
-            //rect.position({x:0, y:(heightPaper-120)});
-        }
+		else {
+			lastClickTime = Date.now();
 
-
-		//area de diagrama x > 120
-		if (x <widthPaper){
-
-			//Acertar posição
-			ControladorAmalia.elementoConfinadoAoPaper(minWidthDiagramPaper,minHeightDiagramPaper,widthPaper,heightPaper, elementoCima);//tenho problema com a largura
-
-			//Obter o elemento que ficou por baixo daquele que estou a deslocar
-			var elementoBaixo = graph2.get('cells').find(function(cell){
-				// esquisito mas o elemento de cima também é dos elementos do grupo e eu não estou interessado
-				if (cell.id === elementoCima.id){return false;}
-
-				//estou interessado Classes Inferfaces e Classes Abstratas cuja bounding box contem o ponto x,y
-				//e essas coinsas são tudo classes
-				if(cell instanceof instanceClass
-					&& cell.getBBox().containsPoint(g.point(x, y))){
-						return true;
-					}else{
-						return false;
-					}
-			});
-
-			//Estabelecer ligações se ainda não existirem
-			if (elementoBaixo && !_.contains(graph2.getNeighbors(elementoBaixo), elementoCima)){
-
-				//Casos
-				if(elementoBaixo instanceof instanceInterface
-					&& elementoCima instanceof instanceClass
-					&& !(elementoCima instanceof instanceInterface)){
-
-						//O elemento de Baixo é uma interface - segue-se uma implementação se o de cima não for uma interface
-						ControladorAmalia.associaImplementa(graph2,elementoCima,elementoBaixo);
-
-				}else if (elementoBaixo instanceof instanceAbstract
-					&& elementoCima instanceof instanceClass
-					&& !(elementoCima instanceof instanceInterface) ){
-
-						// elemento de baixo é classe abstrata a de cima é classe ou classe abstrata --> herança
-						ControladorAmalia.associaHeranca(graph2,elementoCima.id,elementoBaixo.id);
-
-				}else if (!(elementoBaixo instanceof instanceAbstract || elementoBaixo instanceof instanceInterface)
-					&&!(elementoCima instanceof instanceAbstract || elementoCima instanceof instanceInterface)){
-
-						ControladorAmalia.toogleDialogoAssociaClasses(elementoCima.id,elementoBaixo.id);
-
-				}
-
+			var elementoCima = cellView.model;
+			if (x > widthPaper-20){
+				widthPaper = widthPaper+50;
+				paper.setDimensions(widthPaper,heightPaper);
+				//rect.position{x:0,y:(heightPaper-120)};
 			}
+			if(y > heightPaper-20){
+				heightPaper = heightPaper +50;
+				paper.setDimensions(widthPaper,heightPaper);
+				//rect.position({x:0, y:(heightPaper-120)});
+			}
+	
+	
+			//area de diagrama x > 120
+			if (x <widthPaper){
+	
+				//Acertar posição
+				ControladorAmalia.elementoConfinadoAoPaper(minWidthDiagramPaper,minHeightDiagramPaper,widthPaper,heightPaper, elementoCima);//tenho problema com a largura
+	
+				//Obter o elemento que ficou por baixo daquele que estou a deslocar
+				var elementoBaixo = graph2.get('cells').find(function(cell){
+					// esquisito mas o elemento de cima também é dos elementos do grupo e eu não estou interessado
+					if (cell.id === elementoCima.id){return false;}
+	
+					//estou interessado Classes Inferfaces e Classes Abstratas cuja bounding box contem o ponto x,y
+					//e essas coinsas são tudo classes
+					if(cell instanceof instanceClass
+						&& cell.getBBox().containsPoint(g.point(x, y))){
+							return true;
+						}else{
+							return false;
+						}
+				});
+	
+				//Estabelecer ligações se ainda não existirem
+				if (elementoBaixo && !_.contains(graph2.getNeighbors(elementoBaixo), elementoCima)){
+	
+					//Casos
+					if(elementoBaixo instanceof instanceInterface
+						&& elementoCima instanceof instanceClass
+						&& !(elementoCima instanceof instanceInterface)){
+	
+							//O elemento de Baixo é uma interface - segue-se uma implementação se o de cima não for uma interface
+							ControladorAmalia.associaImplementa(graph2,elementoCima,elementoBaixo);
+	
+					}else if (elementoBaixo instanceof instanceAbstract
+						&& elementoCima instanceof instanceClass
+						&& !(elementoCima instanceof instanceInterface) ){
+	
+							// elemento de baixo é classe abstrata a de cima é classe ou classe abstrata --> herança
+							ControladorAmalia.associaHeranca(graph2,elementoCima.id,elementoBaixo.id);
+	
+					}else if (!(elementoBaixo instanceof instanceAbstract || elementoBaixo instanceof instanceInterface)
+						&&!(elementoCima instanceof instanceAbstract || elementoCima instanceof instanceInterface)){
+	
+							ControladorAmalia.toogleDialogoAssociaClasses(elementoCima.id,elementoBaixo.id);
+	
+					}
+	
+				}
+			}
+			zoomfit();
 		}
-		zoomfit();
+		
 	});
 
-		//Duplos clicks para mudar os momes dos objectos e alterar os seus atributos.
-    paper.on('cell:pointerdblclick',function(cellView,evt, x, y){
+	var lastClickTime = 0;
+	var dblClick = false;
+
+	function dblClickFunction(cellView){
 
 		var elemento = cellView.model;
+		//console.log(elemento)
+
+		if (elemento instanceof instanceInterface){
+
+			ControladorAmalia.toogleDialogoAlteraInterface(elemento);
+		}
+		else
+			ControladorAmalia.toogleDialogoAlteraClasses(elemento);
+
+	}
+
+	//Duplos clicks para mudar os momes dos objectos e alterar os seus atributos.
+	paper.on('cell:pointerdblclick',function(cellView,evt, x, y){
+
+		var elemento = cellView.model;
+		console.log(elemento)
 
 		if (elemento instanceof instanceInterface){
 

@@ -146,6 +146,9 @@ $(document).ready(function () {
         //trazer o elemento clicado para a frente do diagrama
         elemento.toFront();
 
+        if (Date.now() - lastClickTime < 300) {
+			dblClick = true;
+		}
     });
 
 
@@ -156,7 +159,15 @@ $(document).ready(function () {
     //mouse up para estabelecer ligações entre os elementos na área de desenho
     paper.on('cell:pointerup', function (cellView, evt, x, y) {
 
-        var elementoCima = cellView.model;
+        if (dblClick) {
+			dblClick = false;
+			dblClickFunction(cellView)
+		}
+
+        else {
+            lastClickTime = Date.now();
+
+            var elementoCima = cellView.model;
         //console.log(JSON.stringify (elementoCima.toJSON()));
         //console.log((elementoCima.toJSON()).position.x);
 
@@ -227,8 +238,30 @@ $(document).ready(function () {
 
         }
 
-
+        }
     });
+
+    var lastClickTime = 0;
+	var dblClick = false;
+
+    function dblClickFunction(cellView){
+        var elemento = cellView.model;
+
+        //mudar atributos do caso de uso
+        if (elemento instanceof instanceCasoUso) {
+            // esta era uma tentativa de ter uma só função para chamar os dois dialogos mais é uma complicação
+            //mais vale a função comentada
+            //ControladorAmalia.toogleDialogoMudaNome(elemento.id,"#idCaso","#dialogo_casos_uso","#nomeCasoUso");
+            ControladorAmalia.toogleDialogoCasoUso(elemento);
+
+        }
+        //mudar atributos do ator
+        if (elemento instanceof instanceActor) {
+            ControladorAmalia.toogleDialogoAtor(elemento.id);
+
+        }
+    }
+
 
     //Duplos clicks para mudar os momes dos objectos e alterar o tamanho dos casos de uso.
     paper.on('cell:pointerdblclick', function (cellView, evt, x, y) {

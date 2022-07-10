@@ -163,7 +163,7 @@ p #limdialogoLimpaDiagrama {
 }
 
 #z01 {
-    margin-top: 12%;
+    /* margin-top: 12%; */
 	border-bottom: 1px solid #fff;
 	width: 55%;
 }
@@ -179,7 +179,7 @@ p #limdialogoLimpaDiagrama {
     font-size: 28px;
     color: #fff;
 	font-weight: normal;
-	margin-bottom: 5%;
+	margin-bottom: 15%;
 }
 
 #txt {
@@ -242,6 +242,7 @@ button a {
 
 #p01, #p02, #p03, #p04, #p05 {
     color: #fff!important;
+    margin-top: -12%;
 }
 
 

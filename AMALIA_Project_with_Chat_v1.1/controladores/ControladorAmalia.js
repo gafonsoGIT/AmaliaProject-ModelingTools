@@ -319,7 +319,7 @@ ControladorAmalia ={
 
 		if (classe){
 			var classeJSON = classe.toJSON();
-            //console.log(classe);
+            console.log(classe);
 			$("#idClasse").val(classeJSON.id);
 			$("#nomeDaClasse").val(classeJSON.name);
 			//atributos

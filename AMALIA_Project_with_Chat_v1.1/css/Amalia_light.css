@@ -156,7 +156,6 @@ span {
 }
 
 #z01 {
-    margin-top: 12%;
 	border-bottom: 1px solid #000;
 	width: 55%;
 }
@@ -171,7 +170,12 @@ span {
     font-size: 28px;
     color: #7f7f7f;
 	font-weight: normal;
-	margin-bottom: 5%;
+	margin-bottom: 15%;
+}
+
+#p01, #p02, #p03, #p04, #p05 {
+    /* color: #fff!important; */
+    margin-top: -12%;
 }
 
 #txt {
