@@ -26,7 +26,7 @@ server.listen(3000);
  app.use(cors());   //tell the app to use CORS
 
 //here we make the connection to the mongoDB (note: the chat DB don't exist for the first time, mongoDB will create theBD chat)
-mongoose.connect('mongodb://localhost:27017/chat', function(err){
+mongoose.connect('mongodb+srv://gafonso:1234@cluster0.w5ycz.mongodb.net/chat', function(err){
    if(err){
        console.log(err);
    } else {
