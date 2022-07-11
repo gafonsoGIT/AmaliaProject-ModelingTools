@@ -285,3 +285,19 @@ header {
 #floatingMenu{
     background-color: #F7FEFF!important;
 }
+
+.togetherjs .togetherjs-window header button.togetherjs-close {
+    background-color: #218bb8!important;
+}
+
+#togetherjs-modal-background {
+    background-color: transparent!important;
+}
+
+.togetherjs .togetherjs-modal header button.togetherjs-close {
+    background-color: #218bb8!important;
+}
+
+.togetherjs-tool-name {
+    color: #000!important;
+}

@@ -20,16 +20,38 @@
 		<script src="jQuery/jquery-1.10.2.js"></script>
 		<script src="joint/geometry.js"></script>
 
-		<!-- <script src="https://unpkg.com/geometric@2.2.10/build/geometric.js"></script>
-		<script src="https://unpkg.com/geometric@2.2.10/build/geometric.min.js"></script> -->
-
 		<script src="joint/joint.shapes.uml.js"></script>
 		<script src="Blob.js-master/Blob1.js"></script>
 		<script src="FileSaver.js-master/FileSaver.js"></script>
 
-		<script src="https://togetherjs.com/togetherjs-min.js"></script>
+		<script>
+			TogetherJSConfig_hubBase = "https://togetherjs-hub.glitch.me/"
 
-		<script src="./TogetherJS.js"></script>
+			TogetherJSConfig_getUserName = function () {return "Username";};
+
+			pickRandom = function (array) {
+				return array[Math.floor(Math.random() * array.length)];
+			};
+
+			var DEFAULT_COLOR = [
+				"#8A2BE2",
+				"#7FFF00",
+				"#DC143C",
+				"#00FFFF",
+				"#8FBC8F",
+				"#FF8C00",
+				"#FF00FF",
+				"#FFD700",
+				"#F08080",
+				"#90EE90",
+				"#FF6347"
+			];
+
+			TogetherJSConfig_getUserColor = function () {return pickRandom(DEFAULT_COLOR);};
+		
+		</script>
+
+		<script src="https://togetherjs.com/togetherjs-min.js"></script>
 
 		<!--linguagens files-->
 		<link id ="languages "rel="languages" href="/languages/english.xml" title="English"/>

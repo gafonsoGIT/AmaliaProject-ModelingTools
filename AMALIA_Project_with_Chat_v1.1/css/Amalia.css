@@ -305,3 +305,12 @@ header h1, #p0h{
     margin-left: 1%!important;
 }
 
+
+.togetherjs .togetherjs-person {
+    color: #fff;
+}
+
+#togetherjs-modal-background {
+    background-color: transparent!important;
+}
+
