@@ -8,6 +8,7 @@ body {
     /* width: 50%; */
     top: 50%;
     left: 50%;
+    /* width: 100%; */
     position: absolute;
     transform: translate(-50%, -50%);
     background: #000059!important;
@@ -275,12 +276,12 @@ button a {
     color: #fff;
     position: absolute;
     top: 90% !important;
-    left: 44% !important;
+    left: 47% !important;
 }
 
 #title {
     width: 120%;
-}   
+}  
 
 
 header {

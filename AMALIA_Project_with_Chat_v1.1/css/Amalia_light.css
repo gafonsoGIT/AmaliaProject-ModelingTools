@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    /* width: 100%; */
     top: 50%;
     left: 50%;
     position: absolute;
@@ -252,7 +253,7 @@ button a {
     color: #000;
     position: absolute;
     top: 90% !important;
-    left: 44% !important;
+    left: 47% !important;
 }
 
 #title {
