@@ -286,6 +286,7 @@ button a {
 
 header {
     background-color: #000059 !important;
+    margin-top: -3%!important;
 }
 
 header h1, #p0h{

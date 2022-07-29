@@ -267,6 +267,7 @@ button a {
 
 header {
     background-color: #fff !important;
+    margin-top: -3%!important;
 }
 
 #voltarPagPrincipal, #btnthemes, #btnlanguage, #btnVoltarInicio, #btnClose, #btnSaveProject, #btnCallChat, #btnStartTogetherJS {
